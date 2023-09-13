@@ -50,7 +50,6 @@ The Ray Tracing Engine is an ambitious project that delves into the fascinating 
 
 ## ➤  :spider_web:Demonstration 1
 
-
 <p align="center">
   <img src="images/demonstration1.png" alt="Logo" width="500" height="auto" />
 </p>
@@ -63,7 +62,9 @@ This demonstration outputs a circle of 32 lines pointing away from the middle of
 
 ## ➤  :teapot: Demonstration 2
 
-![picture](/images/demonstration2.png)
+<p align="center">
+  <img src="images/demonstration2.png" alt="Logo" width="550" height="auto" />
+</p>
 
 ### Overview
 
