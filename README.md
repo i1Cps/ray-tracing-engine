@@ -73,6 +73,8 @@ The Ray Tracing Engine is an ambitious project that delves into the fascinating 
   
 **Ray Tracing Engine was built using only C++**
 ![C++ Badge](https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=fff&style=for-the-badge)
+ ## ➤ :hammer: Basic Installation
+
  **Download the workspace**
 
 ```
