@@ -50,7 +50,10 @@ The Ray Tracing Engine is an ambitious project that delves into the fascinating 
 
 ## ➤  :spider_web:Demonstration 1
 
-![picture](/images/demonstration1.png)
+
+<p align="center">
+  <img src="images/gif.gif" alt="Logo" width="650" height="auto" />
+</p>
 
 ### Overview
 
