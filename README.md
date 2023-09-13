@@ -13,11 +13,11 @@
 * [➤ Demonstration 2](#-demonstration-2)
 * [➤ Demonstration 3](#-demonstration-3)
 * [➤ Demonstration 4](#-demonstration-4)
-		* [Spherical Pillars](#spherical-pillars)
-		* [Checkered Floor](#checkered-floor)
-		* [Tea Pot](#tea-pot)
-		* [Scene Inversion Through Glass Ball](#scene-inversion-through-glass-ball)
-		* [Artistic Interpretation](#artistic-interpretation)
+	* [Spherical Pillars](#spherical-pillars)
+	* [Checkered Floor](#checkered-floor)
+	* [Tea Pot](#tea-pot)
+	* [Scene Inversion Through Glass Ball](#scene-inversion-through-glass-ball)
+	* [Artistic Interpretation](#artistic-interpretation)
 * [➤ :floppy_disk: Key Project File Descriptions](#-floppy_disk-key-project-file-descriptions)
 	* [CORE FILES:](#core-files)
 	* [Ray Tracing Files:](#ray-tracing-files)
@@ -81,20 +81,20 @@ The transparent glass on the dolphins has a refractive weight of 0.9 with an [In
 
 This demonstration showcases 95% of the capabilities of the Ray Tracing Engine. The [`demonstration5`]() file has every feature offered by the Ray Tracing Engine coded down (making it quite messy), so please continue to read here to see how I generated this image.
 
-#### Spherical Pillars
+### Spherical Pillars
 Lets start with the pillars. The pillars are generated with shiny reflective balls that alternate between aqua and white (they look grey because of the lighting). They all have a reflective weight of 0.9 and offset each other by 1 each pillar.
 
   
-#### Checkered Floor
+### Checkered Floor
 The floor plane is checkered aqua and white with a reflective weight of 0.3.
 
   
-#### Tea Pot
+### Tea Pot
 
 The teapot PolyMesh is created with the smooth property (uses vertex normals instead of face normals). And is created with a [`compound_material`]() that contains a blue [`phong_material`]() and [`global_material`]() with a reflective weight of 0.9.
 
 
-#### Scene Inversion Through Glass Ball
+### Scene Inversion Through Glass Ball
 
 Lastly, we have a giant glass ball:
 
@@ -104,7 +104,7 @@ In the real world, when you look through a large glass sphere or any convex lens
 
 I gave the glass ball an [Index of Refraction](https://en.wikipedia.org/wiki/List_of_refractive_indices) of 1.5. This number contributes to the [Total Inter Refraction](https://en.wikipedia.org/wiki/Total_internal_reflection) causing this beautiful effect.
 
-#### Artistic Interpretation
+### Artistic Interpretation
 
 I chose to name this scene "Open Your Eyes" to draw a parallel between reflections and the mesmerising visual illusion crafted by the spherical pillars on either side of the screen. These pillars conjure the sensation of gradually closing human eyes as they recede into the distance.
 
