@@ -53,13 +53,9 @@ This demonstration loads and draws a triangle mesh object from the `teapot_small
 
 ## ➤ Demonstration 3
 
-  
-
 ![picture](/images/demonstration3.png)
 
-  
-
-This demonstration loads and draws a triangle mesh object from the `teapot_smaller.ply` file. It first creates a 1024x1024 framebuffer before defining a 4D homogeneous transform matrix. Next, the file reads in the .ply file and applies the transform matrix. Then, for each vertex on every triangle, it performs a projection from 3D space to 2D space, resulting in 2D screen coordinates (x,y). Lastly, it uses the draw_line function to draw each line connecting the points on each triangle to complete the mesh. This is a quick, simple demonstration of the polymesh class.
+This demonstration spawns 53 reflective shiny balls randomly in the scene using uniform distribution. The rays in this scene recursively reflect up to 5 times, meaning you can see up to 3 mirror worlds. The spheres themselves have a radius of 1 and are made using a [`compound_material`]() that includes the [`global_material`]() and the [`phong_material`](). The reflect weight of the `global_material` is set to 0.9, mimicking that of a mirror. While the RGB values from the `phong_material` are created randomly, using a uniform distribution. The scene contains 2 directional lights and a reflective white plane with a reflection weight of 0.3.
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png)](#demonstration-4)
 
