@@ -87,8 +87,9 @@ This demonstration spawns 53 reflective shiny balls randomly in the scene using 
 
 ## ➤  :dolphin:Demonstration 4
 
-![picture](/images/demonstration4.png)
-
+<p align="center">
+  <img src="images/demonstration4.png" alt="Logo" width="750" height="auto" />
+</p>
 
 ### Overview
 
@@ -110,7 +111,9 @@ The transparent glass on the dolphins has a refractive weight of 0.9 with an [In
 
 ## ➤ :eye: Demonstration 5 "Open Your Eyes"
 
-  ![picture](/images/demonstration5.png)
+<p align="center">
+  <img src="images/demonstration5.png" alt="Logo" width="750" height="auto" />
+</p>
 
 ### Overview
 
