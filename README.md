@@ -13,6 +13,8 @@
 * [➤ Demonstration 2](#-demonstration-2)
 * [➤ Demonstration 3](#-demonstration-3)
 * [➤ Demonstration 4](#-demonstration-4)
+	* [Pod of Dolphins](#pod-of-dolphins)
+* [➤ Demonstration 5 "Open Your Eyes"](#-demonstration-5-open-your-eyes)
 	* [Spherical Pillars](#spherical-pillars)
 	* [Checkered Floor](#checkered-floor)
 	* [Tea Pot](#tea-pot)
@@ -51,7 +53,7 @@ This demonstration outputs a circle of 32 lines pointing away from the middle of
 
 ![picture](/images/demonstration2.png)
 
-This demonstration loads and draws a triangle mesh object from the `teapot_smaller.ply` file. It first creates a 1024x1024 framebuffer before defining a 4D homogeneous transform matrix. Next, the file reads in the .ply file and applies the transform matrix. Then, for each vertex on every triangle, it performs a projection from 3D space to 2D space, resulting in 2D screen coordinates (x,y). Lastly, it uses the draw_line function to draw each line connecting the points on each triangle to complete the mesh. This is a quick, simple demonstration of the polymesh class.
+This demonstration loads and draws a triangle mesh object from the [`teapot_smaller.ply`](code/teapot_smaller.ply) file. It first creates a 1024x1024 framebuffer before defining a 4D homogeneous transform matrix. Next, the file reads in the .ply file and applies the transform matrix. Then, for each vertex on every triangle, it performs a projection from 3D space to 2D space, resulting in 2D screen coordinates (x,y). Lastly, it uses the draw_line function to draw each line connecting the points on each triangle to complete the mesh. This is a quick, simple demonstration of the polymesh class.
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png)](#demonstration-3)
 
@@ -59,21 +61,37 @@ This demonstration loads and draws a triangle mesh object from the `teapot_small
 
 ![picture](/images/demonstration3.png)
 
-This demonstration spawns 53 reflective shiny balls randomly in the scene using uniform distribution. The rays in this scene recursively reflect up to 5 times, meaning you can see up to 3 mirror worlds. The spheres themselves have a radius of 1 and are made using a [`compound_material`]() that includes the [`global_material`]() and the [`phong_material`](). The reflect weight of the `global_material` is set to 0.9, mimicking that of a mirror. While the RGB values from the `phong_material` are created randomly, using a uniform distribution. The scene contains 2 directional lights and a reflective white plane with a reflection weight of 0.3.
+This demonstration spawns 53 reflective shiny balls randomly in the scene using uniform distribution. The rays in this scene recursively reflect up to 5 times, meaning you can see up to 3 mirror worlds. The spheres themselves have a radius of 1 and are made using a [`compound_material`](code/compound_material.cpp) that includes the [`global_material`](code/global_material.cpp) and the [`phong_material`](code/phong_material.cpp). The reflect weight of the `global_material` is set to 0.9, mimicking that of a mirror. While the RGB values from the `phong_material` are created randomly, using a uniform distribution. The scene contains 2 directional lights and a reflective white plane with a reflection weight of 0.3.
+
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png)](#demonstration-4)
 
 ## ➤ Demonstration 4
 
+  
+
 ![picture](/images/demonstration4.png)
 
-This demonstration showcases the full capabilities of the [`polymesh_object`]() class using a PolyMesh of a pod of dolphins. The pod of dolphins are rendered twice. One set was created with a grey [`phong_material`]() and the other with a transparent glass [`global_material`](). The two side planes use the [`checkered_plane_material`]() class to add colour to the scene, while the floor plane is a reflective aqua using the [`compound_material`]() to amplify the enchanting ambience of the scene even more.
+  
+
+This demonstration showcases the full capabilities of the [`polymesh_object`](code/polymesh_object.cpp) class using a PolyMesh of a pod of dolphins. 
+
+### Pod of Dolphins
+
+The pod of dolphins are rendered twice. One set was created with a grey [`phong_material`](code/phong_material.cpp) and the other with a transparent glass [`global_material`](code/global_material.cpp). The two side planes use the [`checkered_plane_material`](code/checkered_plane_material.cpp) class to add colour to the scene, while the floor plane is a reflective aqua using the [`compound_material`](code/compound_material.cpp) to amplify the enchanting ambience of the scene even more.
+
+ ### Transformations
 
 Two independent transform matrices are used on the two polymesh_objects. The first centers the grey dolphins towards the middle of the camera and pushes them back along the z-axis. While the second centers the glass dolphins but flips them along its y-axis to face the opposite direction, it brings them closer to the camera to better show off the transparency effect.
 
+  
+
 The transparent glass on the dolphins has a refractive weight of 0.9 with an [Index of Refraction](https://en.wikipedia.org/wiki/List_of_refractive_indices) of 1.5, representing real glass. I lowered its reflective weight to 0.1. But the [Fresnel Equation](https://en.wikipedia.org/wiki/Fresnel_equations) refactors the weight between refraction and reflection based on the [Index of Refraction](https://en.wikipedia.org/wiki/List_of_refractive_indices) anyway.
 
-**## Demonstration 5**
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png)](#demonstration-5-open-your-eyes)
+
+## ➤ Demonstration 5 "Open Your Eyes"
 
 ![picture](/images/demonstration5.png)
 
@@ -91,7 +109,7 @@ The floor plane is checkered aqua and white with a reflective weight of 0.3.
   
 ### Tea Pot
 
-The teapot PolyMesh is created with the smooth property (uses vertex normals instead of face normals). And is created with a [`compound_material`]() that contains a blue [`phong_material`]() and [`global_material`]() with a reflective weight of 0.9.
+The teapot PolyMesh is created with the smooth property (uses vertex normals instead of face normals). And is created with a [`compound_material`](code/compound_material.cpp) that contains a blue [`phong_material`](code/phong_material.cpp) and [`global_material`](code/global_material.cpp) with a reflective weight of 0.9.
 
 
 ### Scene Inversion Through Glass Ball
