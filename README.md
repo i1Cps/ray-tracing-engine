@@ -1,6 +1,6 @@
 <!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️--><h1 align="center">ray-tracing-engine</h1>
 <p align="center">
-  <img src="images/picture.png" alt="Logo" width="550" height="auto" />
+  <img src="images/demonstration3.png" alt="Logo" width="550" height="auto" />
 </p>
 
 
@@ -10,12 +10,18 @@
 
 * [➤ :pencil: About The Project](#-pencil-about-the-project)
 * [➤  :spider_web:Demonstration 1](#--spider_webdemonstration-1)
+	* [Overview](#overview)
 * [➤  :teapot: Demonstration 2](#--teapot-demonstration-2)
+	* [Overview](#overview-1)
 * [➤  :green_circle: :brown_circle: :red_circle: Demonstration 3](#--green_circle-brown_circle-red_circle-demonstration-3)
+	* [Overview](#overview-2)
 * [➤  :dolphin:Demonstration 4](#--dolphindemonstration-4)
+	* [Overview](#overview-3)
 	* [Pod of Dolphins](#pod-of-dolphins)
 	* [Transformations](#transformations)
+	* [Glass Dolphins](#glass-dolphins)
 * [➤ :eye: Demonstration 5 "Open Your Eyes"](#-eye-demonstration-5-open-your-eyes)
+	* [Overview](#overview-4)
 	* [Spherical Pillars](#spherical-pillars)
 	* [Checkered Floor](#checkered-floor)
 	* [Tea Pot](#tea-pot)
@@ -46,7 +52,9 @@ The Ray Tracing Engine is an ambitious project that delves into the fascinating 
 
 ![picture](/images/demonstration1.png)
 
-This demonstration outputs a circle of 32 lines pointing away from the middle of the image at (256,256) on a 512x512 screen. Its primary focus is to showcase basic utility of the framebuffer class. Users can use the linedrawer.cpp file to output any length stroke to the FrameBuffer and thus draw nearly any 2D image. (The functionality is similar to the [HTML Canvas stroke method](https://www.w3schools.com/jsref/canvas_stroke.asp)). However, this is far from what the Ray Tracing Engine was designed for and should be viewed as nothing but a simple demonstration to visualise what the FrameBuffer does.
+### Overview
+
+This demonstration outputs a circle of 32 lines pointing away from the middle of the image at (256,256) on a 512x512 screen. Its primary focus is to showcase basic utility of the framebuffer class. Users can use the [linedrawer.cpp](code/linedrawer.cpp) file to output any length stroke to the framebuffer and thus draw nearly any 2D image. (The functionality is similar to the [HTML Canvas stroke method](https://www.w3schools.com/jsref/canvas_stroke.asp)). However, this is far from what the Ray Tracing Engine was designed for and should be viewed as nothing but a simple demonstration to visualise what the FrameBuffer does.
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png)](#-teapot-demonstration-2)
 
@@ -54,7 +62,9 @@ This demonstration outputs a circle of 32 lines pointing away from the middle of
 
 ![picture](/images/demonstration2.png)
 
-This demonstration loads and draws a triangle mesh object from the [`teapot_smaller.ply`](code/teapot_smaller.ply) file. It first creates a 1024x1024 framebuffer before defining a 4D homogeneous transform matrix. Next, the file reads in the .ply file and applies the transform matrix. Then, for each vertex on every triangle, it performs a projection from 3D space to 2D space, resulting in 2D screen coordinates (x,y). Lastly, it uses the draw_line function to draw each line connecting the points on each triangle to complete the mesh. This is a quick, simple demonstration of the polymesh class.
+### Overview
+
+This demonstration loads and draws a triangle mesh object from the [`teapot_smaller.ply`](code/teapot_smaller.ply) file. It first creates a 1024x1024 framebuffer before defining a 4D homogeneous transform matrix. Next, the file reads in the .ply file and applies the transform matrix. Then, for each vertex on every triangle, it performs a projection from 3D space to 2D space, resulting in 2D screen coordinates (x,y) for every vertex. Lastly, it uses the draw_line function to connect each vertex on every triangle to complete the mesh. This is a quick, simple demonstration of the polymesh class.
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png)](#-green_circle-brown_circle-red_circle-demonstration-3)
 
@@ -64,6 +74,8 @@ This demonstration loads and draws a triangle mesh object from the [`teapot_smal
 
 ![picture](/images/demonstration3.png)
 
+### Overview
+
 This demonstration spawns 53 reflective shiny balls randomly in the scene using uniform distribution. The rays in this scene recursively reflect up to 5 times, meaning you can see up to 3 mirror worlds. The spheres themselves have a radius of 1 and are made using a [`compound_material`](code/compound_material.cpp) that includes the [`global_material`](code/global_material.cpp) and the [`phong_material`](code/phong_material.cpp). The reflect weight of the `global_material` is set to 0.9, mimicking that of a mirror. While the RGB values from the `phong_material` are created randomly, using a uniform distribution. The scene contains 2 directional lights and a reflective white plane with a reflection weight of 0.3.
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png)](#-dolphindemonstration-4)
@@ -72,7 +84,9 @@ This demonstration spawns 53 reflective shiny balls randomly in the scene using 
 
 ![picture](/images/demonstration4.png)
 
-  
+
+### Overview
+
 This demonstration showcases the full capabilities of the [`polymesh_object`](code/polymesh_object.cpp) class using a PolyMesh of a pod of dolphins.
 
 ### Pod of Dolphins
@@ -83,6 +97,7 @@ The pod of dolphins are rendered twice. One set was created with a grey [`phong_
 
 Two independent transform matrices are used on the two polymesh_objects. The first centers the grey dolphins towards the middle of the camera and pushes them back along the z-axis. While the second centers the glass dolphins but flips them along its y-axis to face the opposite direction, it brings them closer to the camera to better show off the transparency effect.
 
+### Glass Dolphins
 
 The transparent glass on the dolphins has a refractive weight of 0.9 with an [Index of Refraction](https://en.wikipedia.org/wiki/List_of_refractive_indices) of 1.5, representing real glass. I lowered its reflective weight to 0.1. But the [Fresnel Equation](https://en.wikipedia.org/wiki/Fresnel_equations) refactors the weight between refraction and reflection based on the [Index of Refraction](https://en.wikipedia.org/wiki/List_of_refractive_indices) anyway.
 
@@ -91,6 +106,8 @@ The transparent glass on the dolphins has a refractive weight of 0.9 with an [In
 ## ➤ :eye: Demonstration 5 "Open Your Eyes"
 
   ![picture](/images/demonstration5.png)
+
+### Overview
 
 This demonstration showcases 95% of the capabilities of the Ray Tracing Engine. The [`demonstration5`](code/demonstration5.cpp) file has every feature offered by the Ray Tracing Engine coded down (making it quite messy), so please continue to read here to see how I generated this image.
 
