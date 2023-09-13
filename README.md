@@ -8,7 +8,7 @@
 
 ## ➤ Table of Contents
 
-* [➤ ::pencil:: About The Project](#-pencil-about-the-project)
+* [➤ :pencil: About The Project](#-pencil-about-the-project)
 * [➤  :spider_web:Demonstration 1](#--spider_webdemonstration-1)
 * [➤  :teapot: Demonstration 2](#--teapot-demonstration-2)
 * [➤  :green_circle: :brown_circle: :red_circle: Demonstration 3](#--green_circle-brown_circle-red_circle-demonstration-3)
@@ -34,7 +34,7 @@
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png)](#pencil-about-the-project)
 
-## ➤ ::pencil:: About The Project
+## ➤ :pencil: About The Project
 
 
 The Ray Tracing Engine is an ambitious project that delves into the fascinating realm of advanced computer graphics. This project showcases an intricate interplay of mathematics, physics, and programming to create stunning visual effects using ray tracing techniques. It explores the fundamental concepts of reflection and refraction, implementing complex calculations based on Snell's law and the index of refraction to achieve realistic material interactions. The engine's capabilities extend to handling complex geometries, thanks to its support for Constructive Solid Geometry (CSG) and rendering detailed 3D models converted from .ply files into polygon meshes. Moreover, the project demonstrates an understanding of optical phenomena like total internal reflection, leveraging them to craft visually captivating scenes. Dive into the computer graphics world and explore this ray-tracing marvel's inner workings.
