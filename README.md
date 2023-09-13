@@ -28,9 +28,9 @@
 	* [Scene Inversion Through Glass Ball](#scene-inversion-through-glass-ball)
 	* [Artistic Interpretation](#artistic-interpretation)
 * [➤ :floppy_disk: Key Project File Descriptions](#-floppy_disk-key-project-file-descriptions)
-	* [CORE FILES:](#core-files)
+	* [Core Files:](#core-files)
 	* [Ray Tracing Files:](#ray-tracing-files)
-	* [Materials](#materials)
+	* [Materials:](#materials)
 * [➤ :rocket: Dependencies](#-rocket-dependencies)
 * [➤ :coffee: Buy me a coffee](#-coffee-buy-me-a-coffee)
 * [➤ :scroll: Credits](#-scroll-credits)
@@ -56,7 +56,7 @@ The Ray Tracing Engine is an ambitious project that delves into the fascinating 
 
 ### Overview
 
-This demonstration outputs a circle of 32 lines pointing away from the middle of the image at (256,256) on a 512x512 screen. Its primary focus is to showcase basic utility of the framebuffer class. Users can use the [linedrawer.cpp](code/linedrawer.cpp) file to output any length stroke to the framebuffer and thus draw nearly any 2D image. (The functionality is similar to the [HTML Canvas stroke method](https://www.w3schools.com/jsref/canvas_stroke.asp)). However, this is far from what the Ray Tracing Engine was designed for and should be viewed as nothing but a simple demonstration to visualise what the FrameBuffer does.
+This [demonstration](code/demonstration1.cpp) outputs a circle of 32 lines pointing away from the middle of the image at (256,256) on a 512x512 screen. Its primary focus is to showcase basic utility of the framebuffer class. Users can use the [linedrawer.cpp](code/linedrawer.cpp) file to output any length stroke to the framebuffer and thus draw nearly any 2D image. (The functionality is similar to the [HTML Canvas stroke method](https://www.w3schools.com/jsref/canvas_stroke.asp)). However, this is far from what the Ray Tracing Engine was designed for and should be viewed as nothing but a simple demonstration to visualise what the FrameBuffer does.
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png)](#-teapot-demonstration-2)
 
@@ -68,7 +68,7 @@ This demonstration outputs a circle of 32 lines pointing away from the middle of
 
 ### Overview
 
-This demonstration loads and draws a triangle mesh object from the [`teapot_smaller.ply`](code/teapot_smaller.ply) file. It first creates a 1024x1024 framebuffer before defining a 4D homogeneous transform matrix. Next, the file reads in the .ply file and applies the transform matrix. Then, for each vertex on every triangle, it performs a projection from 3D space to 2D space, resulting in 2D screen coordinates (x,y) for every vertex. Lastly, it uses the draw_line function to connect each vertex on every triangle to complete the mesh. This is a quick, simple demonstration of the polymesh class.
+This [demonstration](code/demonstration2.cpp) loads and draws a triangle mesh object from the [`teapot_smaller.ply`](code/teapot_smaller.ply) file. It first creates a 1024x1024 framebuffer before defining a 4D homogeneous transform matrix. Next, the file reads in the .ply file and applies the transform matrix. Then, for each vertex on every triangle, it performs a projection from 3D space to 2D space, resulting in 2D screen coordinates (x,y) for every vertex. Lastly, it uses the draw_line function to connect each vertex on every triangle to complete the mesh. This is a quick, simple demonstration of the polymesh class.
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png)](#-green_circle-brown_circle-red_circle-demonstration-3)
 
@@ -81,7 +81,7 @@ This demonstration loads and draws a triangle mesh object from the [`teapot_smal
 
 ### Overview
 
-This demonstration spawns 53 reflective shiny balls randomly in the scene using uniform distribution. The rays in this scene recursively reflect up to 5 times, meaning you can see up to 3 mirror worlds. The spheres themselves have a radius of 1 and are made using a [`compound_material`](code/compound_material.cpp) that includes the [`global_material`](code/global_material.cpp) and the [`phong_material`](code/phong_material.cpp). The reflect weight of the `global_material` is set to 0.9, mimicking that of a mirror. While the RGB values from the `phong_material` are created randomly, using a uniform distribution. The scene contains 2 directional lights and a reflective white plane with a reflection weight of 0.3.
+This [demonstration](code/demonstration3.cpp) spawns 53 reflective shiny balls randomly in the scene using uniform distribution. The rays in this scene recursively reflect up to 5 times, meaning you can see up to 3 mirror worlds. The spheres themselves have a radius of 1 and are made using a [`compound_material`](code/compound_material.cpp) that includes the [`global_material`](code/global_material.cpp) and the [`phong_material`](code/phong_material.cpp). The reflect weight of the `global_material` is set to 0.9, mimicking that of a mirror. While the RGB values from the `phong_material` are created randomly, using a uniform distribution. The scene contains 2 directional lights and a reflective white plane with a reflection weight of 0.3.
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png)](#-dolphindemonstration-4)
 
@@ -93,7 +93,7 @@ This demonstration spawns 53 reflective shiny balls randomly in the scene using 
 
 ### Overview
 
-This demonstration showcases the full capabilities of the [`polymesh_object`](code/polymesh_object.cpp) class using a PolyMesh of a pod of dolphins.
+This [demonstration](code/demonstration4.cpp) showcases the full capabilities of the [`polymesh_object`](code/polymesh_object.cpp) class using a PolyMesh of a pod of dolphins.
 
 ### Pod of Dolphins
 
@@ -117,7 +117,7 @@ The transparent glass on the dolphins has a refractive weight of 0.9 with an [In
 
 ### Overview
 
-This demonstration showcases 95% of the capabilities of the Ray Tracing Engine. The [`demonstration5`](code/demonstration5.cpp) file has every feature offered by the Ray Tracing Engine coded down (making it quite messy), so please continue to read here to see how I generated this image.
+This [demonstration](code/demonstration5.cpp) showcases 95% of the capabilities of the Ray Tracing Engine. The [`demonstration5`](code/demonstration5.cpp) file has every feature offered by the Ray Tracing Engine coded down (making it quite messy), so please continue to read here to see how I generated this image.
 
 ### Spherical Pillars
 
@@ -153,9 +153,9 @@ I chose to name this scene "Open Your Eyes" to draw a parallel between reflectio
 
 ## ➤ :floppy_disk: Key Project File Descriptions
 
-  **Theres alot of C++ files in the engine so I wont cover all of them, but some key files include:**
+  **Theres alot of C++ files in this engine so I wont cover all of them, but some key files include:**
 
-### CORE FILES:
+### Core Files:
 
 *  **[`framebuffer.cpp`](code/framebuffer.cpp):** Contains the implementation of the `FrameBuffer` class, which is a fundamental part of the Ray Tracing Engine project. This class manages the pixel data used to create images. It provides various functions for setting pixel colours and depths, retrieving pixel information, and saving the rendered image to files in the PPM format.
 
@@ -170,7 +170,7 @@ I chose to name this scene "Open Your Eyes" to draw a parallel between reflectio
 *  **[`polymesh_object.cpp`](code/polymesh_object.cpp):** This file is fundamental for working with complex 3D models. It reads [PLY](https://en.wikipedia.org/wiki/PLY_(file_format)) files, extracting vertex and triangle data, which can then be checked for intersections or `Hits` with input rays. Since poly meshes are made of triangles, we call this method `ray triangle intersection`, and we compute the properties of these `Hits` with [barycentric coordinates](https://en.wikipedia.org/wiki/Barycentric_coordinate_system). One important property of every `Hit` is it's **normal**. The accuracy of a `Hits` normal helps us output more realistic lighting models. The `polymesh_object` class also allows us to render smooth poly meshes, which can be achieved by calculating vertex normal's instead of face normal's.
 
 
-### Materials
+### Materials:
 
 * **[`global_material`](code/global_material.cpp):** This file defines the GlobalMaterial class, which handles reflection, refraction, and lighting computations. It provides 3 main functions: The first function is the refract_ray function, Which calculates a refraction ray and further calculates if [total inter reflection](https://en.wikipedia.org/wiki/Total_internal_reflection) occurs. This calculation involves a derivation of Snell's formula alongside the materials [index of refraction](https://en.wikipedia.org/wiki/List_of_refractive_indices). The second is the Fresnel function, which uses [Fresnels equation](https://en.wikipedia.org/wiki/Fresnel_equations) to calculate the ratio of reflected and refracted light for a ray on a transparent reflective material. Lastly, we have the compute_once function, a recursive function to handle reflected rays bouncing around the scene. It has a recurse variable which details the maximum number of times each ray can be reflected.
 
