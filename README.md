@@ -75,8 +75,9 @@ This demonstration loads and draws a triangle mesh object from the [`teapot_smal
 ## ➤  :green_circle: :brown_circle: :red_circle: Demonstration 3
 
   
-
-![picture](/images/demonstration3.png)
+<p align="center">
+  <img src="images/demonstration3.png" alt="Logo" width="750" height="auto" />
+</p>
 
 ### Overview
 
