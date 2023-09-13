@@ -52,7 +52,7 @@ The Ray Tracing Engine is an ambitious project that delves into the fascinating 
 
 
 <p align="center">
-  <img src="images/gif.gif" alt="Logo" width="650" height="auto" />
+  <img src="images/demonstration1.png" alt="Logo" width="650" height="auto" />
 </p>
 
 ### Overview
