@@ -9,6 +9,11 @@
 ## ➤ Table of Contents
 
 * [➤ ::pencil:: About The Project](#-pencil-about-the-project)
+* [➤ Demonstration 1](#-demonstration-1)
+* [➤ Demonstration 2](#-demonstration-2)
+* [➤ Demonstration 3](#-demonstration-3)
+* [➤ Demonstration 4](#-demonstration-4)
+* [➤ Demonstration 35](#-demonstration-35)
 * [➤ :floppy_disk: Key Project File Descriptions](#-floppy_disk-key-project-file-descriptions)
 	* [CORE FILES:](#core-files)
 	* [Ray Tracing Files:](#ray-tracing-files)
@@ -28,10 +33,56 @@
 The Ray Tracing Engine is an ambitious project that delves into the fascinating realm of advanced computer graphics. This project showcases an intricate interplay of mathematics, physics, and programming to create stunning visual effects using ray tracing techniques. It explores the fundamental concepts of reflection and refraction, implementing complex calculations based on Snell's law and the index of refraction to achieve realistic material interactions. The engine's capabilities extend to handling complex geometries, thanks to its support for Constructive Solid Geometry (CSG) and rendering detailed 3D models converted from .ply files into polygon meshes. Moreover, the project demonstrates an understanding of optical phenomena like total internal reflection, leveraging them to craft visually captivating scenes. Dive into the computer graphics world and explore this ray-tracing marvel's inner workings.
 
 
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png)](#demonstration-1)
 
+## ➤ Demonstration 1
 
+[picture](/images/demonstration1.png)
 
+This demonstration outputs a circle of 32 lines pointing away from the middle of the image at (256,256) on a 512x512 screen. Its primary focus is to showcase basic utility of the framebuffer class. Users can use the linedrawer.cpp file to output any length stroke to the FrameBuffer and thus draw nearly any 2D image. (The functionality is similar to the [HTML Canvas stroke method](https://www.w3schools.com/jsref/canvas_stroke.asp)). However, this is far from what the Ray Tracing Engine was designed for and should be viewed as nothing but a simple demonstration to visualise what the FrameBuffer does.
 
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png)](#demonstration-2)
+
+## ➤ Demonstration 2
+
+[picture](/images/demonstration2.png)
+
+This demonstration loads and draws a triangle mesh object from the `teapot_smaller.ply` file. It first creates a 1024x1024 framebuffer before defining a 4D homogeneous transform matrix. Next, the file reads in the .ply file and applies the transform matrix. Then, for each vertex on every triangle, it performs a projection from 3D space to 2D space, resulting in 2D screen coordinates (x,y). Lastly, it uses the draw_line function to draw each line connecting the points on each triangle to complete the mesh. This is a quick, simple demonstration of the polymesh class.
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png)](#demonstration-3)
+
+## ➤ Demonstration 3
+
+  
+
+[picture](/images/demonstration3.png)
+
+  
+
+This demonstration loads and draws a triangle mesh object from the `teapot_smaller.ply` file. It first creates a 1024x1024 framebuffer before defining a 4D homogeneous transform matrix. Next, the file reads in the .ply file and applies the transform matrix. Then, for each vertex on every triangle, it performs a projection from 3D space to 2D space, resulting in 2D screen coordinates (x,y). Lastly, it uses the draw_line function to draw each line connecting the points on each triangle to complete the mesh. This is a quick, simple demonstration of the polymesh class.
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png)](#demonstration-4)
+
+## ➤ Demonstration 4
+
+  
+
+[picture](/images/demonstration4.png)
+
+  
+
+This demonstration loads and draws a triangle mesh object from the `teapot_smaller.ply` file. It first creates a 1024x1024 framebuffer before defining a 4D homogeneous transform matrix. Next, the file reads in the .ply file and applies the transform matrix. Then, for each vertex on every triangle, it performs a projection from 3D space to 2D space, resulting in 2D screen coordinates (x,y). Lastly, it uses the draw_line function to draw each line connecting the points on each triangle to complete the mesh. This is a quick, simple demonstration of the polymesh class.
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png)](#demonstration-35)
+
+## ➤ Demonstration 35
+  
+
+[picture](/images/demonstration5.png)
+
+  
+
+This demonstration loads and draws a triangle mesh object from the `teapot_smaller.ply` file. It first creates a 1024x1024 framebuffer before defining a 4D homogeneous transform matrix. Next, the file reads in the .ply file and applies the transform matrix. Then, for each vertex on every triangle, it performs a projection from 3D space to 2D space, resulting in 2D screen coordinates (x,y). Lastly, it uses the draw_line function to draw each line connecting the points on each triangle to complete the mesh. This is a quick, simple demonstration of the polymesh class.
 
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png)](#floppy_disk-key-project-file-descriptions)
