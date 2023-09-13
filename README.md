@@ -13,7 +13,7 @@
 * [➤ Demonstration 2](#-demonstration-2)
 * [➤ Demonstration 3](#-demonstration-3)
 * [➤ Demonstration 4](#-demonstration-4)
-* [➤ Demonstration 35](#-demonstration-35)
+* [➤ Demonstration 5](#-demonstration-5)
 * [➤ :floppy_disk: Key Project File Descriptions](#-floppy_disk-key-project-file-descriptions)
 	* [CORE FILES:](#core-files)
 	* [Ray Tracing Files:](#ray-tracing-files)
@@ -61,20 +61,20 @@ This demonstration spawns 53 reflective shiny balls randomly in the scene using 
 
 ## ➤ Demonstration 4
 
+![picture](/images/demonstration4.png)
+
+This demonstration showcases the full capabilities of the [`polymesh_object`]() class using a PolyMesh of a pod of dolphins. The pod of dolphins are rendered twice. One set was created with a grey [`phong_material`]() and the other with a transparent glass [`global_material`](). The two side planes use the [`checkered_plane_material`]() class to add colour to the scene, while the floor plane is a reflective aqua using the [`compound_material`]() to amplify the enchanting ambience of the scene even more.
+
+Two independent transform matrices are used on the two polymesh_objects. The first centers the grey dolphins towards the middle of the camera and pushes them back along the z-axis. While the second centers the glass dolphins but flips them along its y-axis to face the opposite direction, it brings them closer to the camera to better show off the transparency effect.
+
+The transparent glass on the dolphins has a refractive weight of 0.9 with an [Index of Refraction](https://en.wikipedia.org/wiki/List_of_refractive_indices) of 1.5, representing real glass. I lowered its reflective weight to 0.1. But the [Fresnel Equation](https://en.wikipedia.org/wiki/Fresnel_equations) refactors the weight between refraction and reflection based on the [Index of Refraction](https://en.wikipedia.org/wiki/List_of_refractive_indices) anyway.
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png)](#demonstration-5)
+
+## ➤ Demonstration 5
   
 
-[picture](/images/demonstration4.png)
-
-  
-
-This demonstration loads and draws a triangle mesh object from the `teapot_smaller.ply` file. It first creates a 1024x1024 framebuffer before defining a 4D homogeneous transform matrix. Next, the file reads in the .ply file and applies the transform matrix. Then, for each vertex on every triangle, it performs a projection from 3D space to 2D space, resulting in 2D screen coordinates (x,y). Lastly, it uses the draw_line function to draw each line connecting the points on each triangle to complete the mesh. This is a quick, simple demonstration of the polymesh class.
-
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/solar.png)](#demonstration-35)
-
-## ➤ Demonstration 35
-  
-
-[picture](/images/demonstration5.png)
+![picture](/images/demonstration5.png)
 
   
 
